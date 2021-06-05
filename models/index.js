@@ -1,3 +1,3 @@
-const Song = require('./Song');
+const Song = require('./Song.js');
 
 module.exports = { Song };
