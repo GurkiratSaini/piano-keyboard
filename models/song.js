@@ -25,7 +25,7 @@ Song.init(
     }
 );
 
-module.exports = Song;
+module.exports = { Song };
 
 // TO-DO
 // research how to save array of objects with sequelize and mysql
