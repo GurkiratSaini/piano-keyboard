@@ -11,6 +11,10 @@ Song.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
+        },
+        song_notes: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
@@ -22,3 +26,6 @@ Song.init(
 );
 
 module.exports = Song;
+
+// TO-DO
+// research how to save array of objects with sequelize and mysql

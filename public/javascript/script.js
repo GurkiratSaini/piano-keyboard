@@ -88,6 +88,15 @@ function recordNote(note) {
     })
 }
 
-function saveSong() {
+async function saveSong() {
+    console.log(songNotes);
+    const response = await fetch('/api/recording', {
+        method: 'post',
+        body: JSON.stringify({ songNotes }),
+        headers: { 'Content-Type': 'application/json' }
+    });
 
+    if (response.ok) {
+        alert('Song saved successfully');
+    }
 }

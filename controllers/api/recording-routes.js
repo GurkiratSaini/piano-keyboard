@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    Song.create({ id: req.body.id })
+    Song.create({ id: req.body.id, song_notes: req.body.songNotes })
         .then(dbSongData => res.json(dbSongData))
         .catch(err => {
             console.log(err);
